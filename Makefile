@@ -8,4 +8,4 @@ help:  ## Show this help.
 .PHONY: test
 test:	## Run the tests
 	poetry run pytest tests/doublex
-	poetry run python tests/unittest
+	poetry run python -m unittest discover -s tests/unittest -p '*_test.py'
