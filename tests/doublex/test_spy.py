@@ -17,3 +17,11 @@ class TestSpy:
         spy.foo(1)
 
         expect(spy.foo).to(have_been_called_with(1))
+
+    def test_spy_with_multiple_calls(self):
+        spy = Spy()
+
+        spy.foo(1)
+        spy.foo(2)
+
+        expect(spy.foo).to(have_been_called.twice)
